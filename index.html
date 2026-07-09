@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Nova | Software Release Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+        :root {
+            --cyan-glow: rgba(0, 219, 231, 0.4);
+            --glass-stroke: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: #10141a;
+            color: #dfe2eb;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(16, 20, 26, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-stroke);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 15px var(--cyan-glow);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #00dbe7, transparent);
+            position: absolute;
+            top: 0;
+            animation: scan 4s linear infinite;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#27ff97",
+                        "on-primary": "#00363a",
+                        "secondary-fixed": "#5bffa1",
+                        "on-secondary": "#00391d",
+                        "on-primary-fixed": "#002022",
+                        "on-primary-fixed-variant": "#004f54",
+                        "outline-variant": "#3a494b",
+                        "on-background": "#dfe2eb",
+                        "on-secondary-fixed": "#00210e",
+                        "inverse-on-surface": "#2d3137",
+                        "on-tertiary-container": "#934d00",
+                        "surface-container-lowest": "#0a0e14",
+                        "surface-container-low": "#181c22",
+                        "primary-container": "#00f2ff",
+                        "on-surface": "#dfe2eb",
+                        "on-primary-container": "#006a71",
+                        "on-secondary-container": "#00723f",
+                        "background": "#10141a",
+                        "secondary": "#f5fff3",
+                        "inverse-primary": "#00696f",
+                        "surface-bright": "#353940",
+                        "surface-dim": "#10141a",
+                        "outline": "#849495",
+                        "on-secondary-fixed-variant": "#00522c",
+                        "primary-fixed": "#74f5ff",
+                        "primary": "#e1fdff",
+                        "surface-container-high": "#262a31",
+                        "surface-variant": "#31353c",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#00dbe7",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-tertiary": "#4e2600",
+                        "on-surface-variant": "#b9cacb",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#ffd2b2",
+                        "tertiary-fixed-dim": "#ffb77f",
+                        "surface": "#10141a",
+                        "surface-container-highest": "#31353c",
+                        "surface-container": "#1c2026",
+                        "tertiary": "#fff5f1",
+                        "on-tertiary-fixed-variant": "#6f3900",
+                        "inverse-surface": "#dfe2eb",
+                        "tertiary-fixed": "#ffdcc4",
+                        "surface-tint": "#00dbe7",
+                        "secondary-fixed-dim": "#00e383",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin": "40px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "data-lg": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "data-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "data-lg": ["18px", {"lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-caps": ["10px", {"lineHeight": "12px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "data-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 right-0 w-full md:w-[calc(100%-16rem)] h-16 bg-surface-dim/40 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-margin z-50">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md text-primary uppercase tracking-widest">SOFTWARE RELEASE HUB</span>
+<span class="hidden md:block h-6 w-px bg-white/10"></span>
+<span class="hidden md:block font-label-caps text-label-caps text-on-surface-variant">V1.0.42_STABLE</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-black/30 border-b-2 border-primary-fixed-dim px-3 py-1">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-data-sm font-data-sm text-primary placeholder:text-on-surface-variant/40 w-48" placeholder="SEARCH ASSETS..." type="text"/>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="sensors">sensors</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="help_outline">help_outline</span>
+</div>
+</div>
+</nav>
+<!-- Side Navigation Bar -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-64 bg-surface-dim/40 backdrop-blur-xl border-r border-white/10 shadow-[0_0_20px_rgba(0,219,231,0.1)] flex-col py-margin px-4 z-50">
+<div class="mb-12">
+<h1 class="font-display-lg text-display-lg text-primary tracking-tighter leading-none">PROJECT NOVA</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+            Hub Online
+        </p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-primary font-bold border-r-2 border-primary bg-primary/5" href="#">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span class="font-body-md text-body-md">Releases</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body-md text-body-md">Documentation</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-body-md text-body-md">Licensing</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-body-md text-body-md">Support</span>
+</a>
+</nav>
+<div class="mt-auto p-4 glass-panel rounded mb-4">
+<p class="font-label-caps text-[10px] text-on-surface-variant mb-2">LATEST BUILD</p>
+<p class="font-data-sm text-data-sm text-primary">v1.0.42.0914</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-16 md:pl-64 min-h-screen">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-margin py-20 overflow-hidden">
+<div class="relative z-10 container mx-auto max-w-container-max grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div>
+<span class="inline-block py-1 px-3 border border-primary-fixed-dim text-primary-fixed-dim font-label-caps text-label-caps mb-4 tracking-widest">DEPLOYMENT_READY</span>
+<h2 class="font-display-lg text-[56px] md:text-[72px] text-primary leading-tight font-bold tracking-tighter">
+                        PROJECT NOVA<br/>
+<span class="text-on-background/80">CORE CLIENT</span>
+</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg leading-relaxed">
+                    Access the industry-leading computational environment for institutional researchers. Optimized for massive parallel simulation processing and high-fidelity 3D visualization.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-10 py-5 bg-primary-fixed-dim text-on-primary font-bold text-xl rounded-sm hover:scale-105 transition-transform glow-cyan flex items-center gap-3" id="download-pc-client">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                        Download PC Client
+                    </button>
+<button class="px-8 py-5 border border-primary-fixed-dim text-primary-fixed-dim font-bold text-lg rounded-sm hover:bg-primary/10 transition-colors flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                        Release Notes
+                    </button>
+</div>
+<div class="pt-6 font-data-sm text-data-sm text-on-surface-variant/60 flex items-center gap-6">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span> WIN 10/11 x64</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="memory">memory</span> CUDA SUPPORT REQ</span>
+</div>
+</div>
+<div class="relative group hidden lg:block">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary-fixed-dim to-secondary-fixed-dim rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="glass-panel rounded-xl overflow-hidden aspect-video flex items-center justify-center p-4 relative">
+<div class="scanline"></div>
+<img alt="Software Dashboard Preview" class="w-full h-full object-cover rounded-lg border border-white/5 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk6DeioBpkVMHpwzTUTgSpaBfNgVXWI-u4QyUfudEEX40SYX9eHYiGnwcoGphixt9STnvpTp5XVAWV-gU9a2jyVS8qk0kJ_I40_LxkfDfmEl4sT80bYB2HX08ImD-Y_f4eKqQU-I4qm0XvMO9HO9bHwbigpl-BcTVw8lQozgFzIy8gdlX1QkVi2wLZbK8mq4muWSDYnfb12q4ZIwzuo4rKqMhqgzx32V4U5Fcd_8zDFuoURTQo2cTzSgDrJMMV3FER8euUhbynEXhn"/>
+<div class="absolute top-8 left-8 font-data-sm text-data-sm text-primary tracking-widest bg-black/60 p-2 border-l-2 border-primary">
+                        BUILD_ID: NV_2024_09
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Section -->
+<section class="px-margin py-24 bg-surface-container-lowest relative">
+<div class="container mx-auto max-w-container-max">
+<div class="mb-16">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">INTEGRATED MODULES</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The core client includes these specialized research environments.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Physics -->
+<div class="glass-panel p-6 group hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4" data-icon="dynamic_form">dynamic_form</span>
+<h4 class="font-headline-md text-primary text-xl mb-2">Computational Physics</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Quantum field analysis and thermodynamic modeling with real-time vector visualization.</p>
+</div>
+<!-- Chemistry -->
+<div class="glass-panel p-6 group hover:border-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-3xl mb-4" data-icon="science">science</span>
+<h4 class="font-headline-md text-primary text-xl mb-2">Molecular Chemistry</h4>
+<p class="font-body-md text-sm text-on-surface-variant">High-precision stoichiometric engine with atomic bond simulation capabilities.</p>
+</div>
+<!-- Biology -->
+<div class="glass-panel p-6 group hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4" data-icon="dna">dns</span>
+<h4 class="font-headline-md text-primary text-xl mb-2">Synthetic Biology</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Advanced genetic sequencing and cellular behavior modeling in virtual environments.</p>
+</div>
+<!-- Math -->
+<div class="glass-panel p-6 group hover:border-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-3xl mb-4" data-icon="calculate">calculate</span>
+<h4 class="font-headline-md text-primary text-xl mb-2">Advanced Math</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Topology mapping and multidimensional visualization for complex theoretical research.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Licensing & Deployment -->
+<section class="px-margin py-32 border-y border-white/5">
+<div class="container mx-auto max-w-container-max">
+<div class="text-center mb-20">
+<h3 class="font-headline-md text-headline-md text-primary text-4xl mb-4">DEPLOYMENT SEQUENCE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Standard institutional protocol for software acquisition and network activation.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="space-y-6">
+<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-primary-fixed-dim">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="cloud_download">cloud_download</span>
+</div>
+<h5 class="font-headline-md text-headline-md text-primary">01. Acquisition</h5>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Download the Nova Core Client from this hub. The installer will automatically perform a system audit to ensure CUDA and VRAM requirements are met for local processing.
+                    </p>
+</div>
+<!-- Step 2 -->
+<div class="space-y-6">
+<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-secondary-fixed-dim">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="vpn_key">vpn_key</span>
+</div>
+<h5 class="font-headline-md text-headline-md text-primary">02. Institutional Licensing</h5>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Authentication is managed via institutional SAML/SSO. Licenses are allocated by your organization's research administrator and bound to your encrypted hardware ID.
+                    </p>
+</div>
+<!-- Step 3 -->
+<div class="space-y-6">
+<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<h5 class="font-headline-md text-headline-md text-primary">03. Local Environment</h5>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Upon first launch, the client initializes a secure local sandbox. All simulation data remains encrypted on your local workstation until manually synced to institutional repositories.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin py-32 relative overflow-hidden">
+<div class="container mx-auto max-w-container-max glass-panel p-12 md:p-20 relative rounded-2xl border-primary-fixed-dim/30">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="font-display-lg text-display-lg text-primary mb-6">READY TO INSTALL?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 text-xl leading-relaxed">
+                        Start your research with the latest version of Project Nova. Version 1.0.42 includes enhanced multi-threading and a revamped physics engine.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-10 py-5 bg-primary-fixed-dim text-on-primary font-bold text-xl rounded hover:scale-105 transition-transform glow-cyan">
+                            START DOWNLOAD NOW
+                        </button>
+<button class="px-10 py-5 border border-primary-fixed-dim text-primary-fixed-dim font-bold text-xl rounded hover:bg-primary/10 transition-colors">
+                            VIEW SYSTEM REQS
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="space-y-4 font-data-sm text-data-sm bg-black/40 p-6 border-l-4 border-primary-fixed-dim">
+<p class="text-primary-fixed-dim flex justify-between"><span>DISTRIBUTION_STATUS:</span> <span>[ ACTIVE ]</span></p>
+<p class="text-on-surface-variant flex justify-between"><span>SHA-256 CHECK:</span> <span>VERIFIED</span></p>
+<p class="text-on-surface-variant flex justify-between"><span>MIRROR_LOCATION:</span> <span>GLOBAL_CDN_04</span></p>
+<p class="text-secondary-fixed-dim flex justify-between"><span>CURRENT_LOAD:</span> <span>LOW_LATENCY</span></p>
+<div class="h-2 w-full bg-white/5 rounded-full mt-4 overflow-hidden">
+<div class="h-full bg-primary-fixed-dim w-[92%] animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="px-margin py-12 border-t border-white/10 bg-surface-dim">
+<div class="container mx-auto max-w-container-max flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-display-lg text-headline-md text-primary tracking-tighter">PROJECT NOVA</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant/60 mt-1">© 2024 NEPAL CDC G10. INSTITUTIONAL RELEASE HUB.</p>
+</div>
+<div class="flex gap-8 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">LICENSE AGREEMENT</a>
+<a class="hover:text-primary transition-colors" href="#">SECURITY AUDITS</a>
+<a class="hover:text-primary transition-colors" href="#">SUPPORT TICKETS</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="font-data-sm text-data-sm text-primary">ENCRYPTED_ENDPOINT</p>
+<p class="font-label-caps text-[8px] text-on-surface-variant uppercase">Release Channel: Stable</p>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim animate-pulse" data-icon="lock">lock</span>
+</div>
+</div>
+</footer>
+</main>
+<script src="assets/js/main.js"></script>
+<script>
+    // Micro-interaction for HUD tracking
+    document.addEventListener('mousemove', (e) => {
+        const glow = document.querySelectorAll('.glow-cyan');
+        glow.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            el.style.setProperty('--x', `${x}px`);
+            el.style.setProperty('--y', `${y}px`);
+        });
+    });
+
+    console.log("Nova Release Hub: Production Build Online.");
+</script>
+</body></html>
