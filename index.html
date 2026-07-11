@@ -127,7 +127,10 @@
             <span>VIEWPORT // SYSTEM_DASHBOARD</span>
             <span>RES 1920×1080 · FEED_01</span>
           </div>
-          <img src="assets/screenshots/dashboard.png" alt="Project Nova system dashboard" width="1400" height="900" />
+          <picture>
+            <source type="image/webp" srcset="assets/screenshots/dashboard.webp" />
+            <img src="assets/screenshots/dashboard.png" alt="Project Nova system dashboard" width="1024" height="575" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
       </section>
 
@@ -234,22 +237,34 @@
           <figure class="viewport-frame sm">
             <div class="frame-corners" aria-hidden="true"></div>
             <div class="viewport-chrome mono"><span>FEED_02 · ACCESS_CORE</span></div>
-            <img src="assets/screenshots/login.png" alt="Login" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcset="assets/screenshots/login.webp" />
+              <img src="assets/screenshots/login.png" alt="Login" width="1024" height="575" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="viewport-frame sm">
             <div class="frame-corners" aria-hidden="true"></div>
             <div class="viewport-chrome mono"><span>FEED_03 · NEURAL_COHORT</span></div>
-            <img src="assets/screenshots/students.png" alt="Students" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcset="assets/screenshots/students.webp" />
+              <img src="assets/screenshots/students.png" alt="Students" width="1024" height="575" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="viewport-frame sm">
             <div class="frame-corners" aria-hidden="true"></div>
             <div class="viewport-chrome mono"><span>FEED_04 · EXPERT_NODES</span></div>
-            <img src="assets/screenshots/teachers.png" alt="Faculty" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcset="assets/screenshots/teachers.webp" />
+              <img src="assets/screenshots/teachers.png" alt="Faculty" width="1024" height="575" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="viewport-frame sm">
             <div class="frame-corners" aria-hidden="true"></div>
             <div class="viewport-chrome mono"><span>FEED_01 · SYSTEM_DASHBOARD</span></div>
-            <img src="assets/screenshots/dashboard.png" alt="Dashboard" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcset="assets/screenshots/dashboard.webp" />
+              <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="1024" height="575" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </section>
@@ -389,6 +404,6 @@
     </div>
   </div>
 
-  <script src="js/countdown.js"></script>
+  <script src="js/countdown.js" defer></script>
 </body>
 </html>
