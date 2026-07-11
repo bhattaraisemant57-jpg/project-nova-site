@@ -1,10 +1,10 @@
 {
   "version": "1.0.7",
-  "type": "minor",
+  "type": "major",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Update 1.0.7: Fixed in-app updater. Close all Nova windows and reopen, or download a fresh installer from pronova.site if the prompt never appears.",
+  "message": "Update 1.0.7: Fixed in-app updater - DOWNLOAD UPDATE now appears when a newer build is available. Close all Nova windows and reopen, or use CHECK FOR UPDATES.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
   "sha256": "0a00d83085662017fc223e58bb16be3083d6625a491012c5ba4b607d79ffca2a",
-  "releaseNotes": "1.0.7 — Update prompts + CHECK FOR UPDATES. If update still does not appear, download fresh installer from the site download page."
+  "releaseNotes": "1.0.7 - Forced DOWNLOAD UPDATE modal when outdated. CHECK FOR UPDATES on login + Settings. Rust fetch for version.json. Semver compare. Visible errors on network failure."
 }
