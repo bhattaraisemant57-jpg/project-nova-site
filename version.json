@@ -1,8 +1,10 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "A new version of Project Nova is available. Please download the latest installer.",
+  "message": "Small update: VIEW SCREENSHOT and other fixes. The app will install this automatically — no uninstall needed.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "releaseNotes": "Initial public demo build."
+  "sha256": "41584284b98c2432c2882eb5ab5a24e5b8035ac6ca7cbc56ee8116ec84045305",
+  "releaseNotes": "1.0.1 — Auto-updater (download+install), VIEW SCREENSHOT admin fixes, and latest demo fixes. Small update: re-open the app to apply."
 }
