@@ -4,354 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Nova | Complete School Operating System</title>
-  <meta name="description" content="Project Nova — A complete school operating system. ERP, student management, faculty management, simulations & more. Download the demo today." />
+  <meta name="description" content="Project Nova — A complete school operating system. Student management, faculty, simulations, and licensing. Download the demo for Windows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <div class="page-grid" aria-hidden="true"></div>
 
-  <div class="cyber-grid"></div>
-  <div class="scanline"></div>
-
-  <!-- Top navigation -->
-  <header class="top-bar">
-    <div class="top-brand">
-      <div class="top-brand-icon">🧬</div>
-      <div class="top-brand-text">PROJECT <span>NOVA</span></div>
-    </div>
-    <nav class="top-nav">
+  <header class="topbar">
+    <a class="logo" href="#">
+      <span>PROJECT <em>NOVA</em></span>
+    </a>
+    <nav class="nav">
       <a href="#modules">Modules</a>
-      <a href="#screenshots">Preview</a>
+      <a href="#preview">Preview</a>
       <a href="#pricing">Pricing</a>
       <a href="#download">Download</a>
     </nav>
+    <a class="btn btn-sm" href="#download">Get Demo</a>
   </header>
 
-  <!-- 7-day countdown banner -->
-  <div class="countdown-banner" id="countdown-banner">
-    <span class="offer-text">🔥 EARLY BIRD — 7 DAYS ONLY: Rs. 10,000 Annual / Rs. 25,000 Triennial</span>
-    <div class="countdown-timer">
-      <div class="countdown-unit"><span class="num" id="cd-days">07</span><span class="lbl">Days</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-hours">00</span><span class="lbl">Hrs</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-mins">00</span><span class="lbl">Min</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-secs">00</span><span class="lbl">Sec</span></div>
-    </div>
+  <div class="offer-bar" id="countdown-banner">
+    <span class="offer-text">Early bird ends in <b id="cd-days">07</b>d <b id="cd-hours">00</b>h <b id="cd-mins">00</b>m <b id="cd-secs">00</b>s — Annual Rs. 10,000 · Triennial Rs. 25,000</span>
   </div>
 
-  <div class="page-wrap">
+  <main>
 
-    <!-- Hero -->
     <section class="hero">
-      <div class="hero-logo">🧬</div>
-      <h1>PROJECT <span>NOVA</span></h1>
-      <p class="hero-tagline">This is a complete school operating system.</p>
-      <div class="hero-version">SYSTEM CORE V1.0 — DEMO BUILD</div>
-
-      <div class="hero-actions">
-        <a href="#download" class="btn-primary">⬇ DOWNLOAD DEMO</a>
-        <a href="#pricing" class="btn-outline">VIEW PRICING</a>
+      <div class="hero-copy">
+        <p class="eyebrow">SYSTEM CORE V1.0 — DEMO</p>
+        <h1>PROJECT <span>NOVA</span></h1>
+        <p class="tagline">This is a complete school operating system.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#download">Download Demo</a>
+          <a class="btn btn-ghost" href="#pricing">View Pricing</a>
+        </div>
       </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="val">9</div>
-          <div class="desc">Integrated Modules</div>
-        </div>
-        <div class="hero-stat">
-          <div class="val">6</div>
-          <div class="desc">Live in Demo</div>
-        </div>
-        <div class="hero-stat">
-          <div class="val">100%</div>
-          <div class="desc">Offline Ready</div>
-        </div>
-        <div class="hero-stat">
-          <div class="val">1</div>
-          <div class="desc">License Per School</div>
-        </div>
+      <div class="hero-shot">
+        <img src="assets/screenshots/dashboard.png" alt="Project Nova system dashboard" width="1400" height="900" />
       </div>
     </section>
 
-    <!-- Modules -->
-    <section id="modules">
-      <div class="section-header">
-        <div class="label-caps">Central Module Hub</div>
-        <h2>System Modules</h2>
-        <p>Every module in Project Nova is designed for school operations — from student records to curriculum simulations.</p>
-      </div>
-
-      <div class="module-grid">
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">🔐</span>
-            <span class="mod-card-tag live">LIVE</span>
-          </div>
-          <h3>Access_Core</h3>
-          <p>Authentication &amp; identity management — school activation, login, admin approval.</p>
-          <div class="mod-card-bottom"><span>MOD_01</span><span>LAB_ACTIVE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">📡</span>
-            <span class="mod-card-tag soon">COMING</span>
-          </div>
-          <h3>Live_Telemetry</h3>
-          <p>Real-time data visualization feed for school-wide analytics and monitoring.</p>
-          <div class="mod-card-bottom"><span>MOD_02</span><span>SYSTEM_STABLE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">👥</span>
-            <span class="mod-card-tag live">LIVE</span>
-          </div>
-          <h3>Neural_Cohort</h3>
-          <p>Student registry — add, edit, search, filter by class and section.</p>
-          <div class="mod-card-bottom"><span>MOD_03</span><span>SYNC_COMPLETE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">🧠</span>
-            <span class="mod-card-tag live">LIVE</span>
-          </div>
-          <h3>Expert_Nodes</h3>
-          <p>Faculty management — teacher records, subjects, qualifications.</p>
-          <div class="mod-card-bottom"><span>MOD_04</span><span>VERIFIED</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">📅</span>
-            <span class="mod-card-tag demo">DEMO</span>
-          </div>
-          <h3>Temporal_Grid</h3>
-          <p>Dynamic scheduling &amp; timetable optimization for classes and faculty.</p>
-          <div class="mod-card-bottom"><span>MOD_05</span><span>SCHEDULE_LIVE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">🧪</span>
-            <span class="mod-card-tag demo">DEMO</span>
-          </div>
-          <h3>Curriculum_Sim</h3>
-          <p>Force/Motion, Circulation, Maths &amp; English — 4 interactive previews with live controls.</p>
-          <div class="mod-card-bottom"><span>MOD_06</span><span>SIM_PREVIEW</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">✅</span>
-            <span class="mod-card-tag soon">COMING</span>
-          </div>
-          <h3>Integrity_Check</h3>
-          <p>Assessment &amp; certification engine for exams and grading.</p>
-          <div class="mod-card-bottom"><span>MOD_07</span><span>TEST_PHASE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">🏦</span>
-            <span class="mod-card-tag demo">DEMO</span>
-          </div>
-          <h3>Fiscal_Ledger</h3>
-          <p>License overview, pricing, renewal &amp; transaction history preview.</p>
-          <div class="mod-card-bottom"><span>MOD_08</span><span>BALANCE_STABLE</span></div>
-        </div>
-
-        <div class="mod-card">
-          <div class="mod-card-top">
-            <span class="mod-card-icon">⚙️</span>
-            <span class="mod-card-tag soon">COMING</span>
-          </div>
-          <h3>System_Tune</h3>
-          <p>Global parameters, environment settings &amp; school configuration.</p>
-          <div class="mod-card-bottom"><span>MOD_09</span><span>CONFIG_OPEN</span></div>
-        </div>
+    <section class="section" id="modules">
+      <header class="section-head">
+        <p class="eyebrow">Central Module Hub</p>
+        <h2>Nine modules. One school OS.</h2>
+        <p>The same module set you see in the desktop client — built for enrolment, faculty, scheduling, simulations, and licensing.</p>
+      </header>
+      <div class="mod-grid">
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_01</span><span class="tag tag-live">Available</span></div>
+          <h3>Access Core</h3>
+          <p>School activation, login, and admin approval for institutional accounts.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_02</span><span class="tag tag-soon">Coming</span></div>
+          <h3>Live Telemetry</h3>
+          <p>School-wide operational overview — enrolment trends and system health.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_03</span><span class="tag tag-live">Available</span></div>
+          <h3>Neural Cohort</h3>
+          <p>Student registry with search and filters by class and section.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_04</span><span class="tag tag-live">Available</span></div>
+          <h3>Expert Nodes</h3>
+          <p>Faculty records, subjects, and qualification tracking.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_05</span><span class="tag tag-demo">Demo</span></div>
+          <h3>Temporal Grid</h3>
+          <p>Weekly timetable preview for classes and faculty periods.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_06</span><span class="tag tag-demo">Demo</span></div>
+          <h3>Curriculum Sim</h3>
+          <p>Force/Motion, Circulation, Maths, and English interactive previews.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_07</span><span class="tag tag-soon">Coming</span></div>
+          <h3>Integrity Check</h3>
+          <p>Assessments, marks, and certification workflows for the academic year.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_08</span><span class="tag tag-demo">Demo</span></div>
+          <h3>Fiscal Ledger</h3>
+          <p>License status, pricing overview, and sample transaction history.</p>
+        </article>
+        <article class="mod">
+          <div class="mod-top"><span class="mod-id">MOD_09</span><span class="tag tag-soon">Coming</span></div>
+          <h3>System Tune</h3>
+          <p>Institution settings and configuration for your campus deployment.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Screenshots -->
-    <section id="screenshots">
-      <div class="section-header">
-        <div class="label-caps">Live Preview</div>
-        <h2>See It In Action</h2>
-        <p>Real screenshots from the Project Nova desktop client — cyberpunk interface, built for schools.</p>
-      </div>
-
-      <div class="screenshot-grid">
-        <div class="screenshot-card">
-          <img src="assets/screenshots/login.png" alt="Project Nova Login Screen" loading="lazy" />
-          <div class="caption">ACCESS_CORE — Login &amp; Authentication</div>
-        </div>
-        <div class="screenshot-card">
-          <img src="assets/screenshots/dashboard.png" alt="Project Nova Dashboard" loading="lazy" />
-          <div class="caption">SYSTEM_DASHBOARD — Central Module Hub</div>
-        </div>
-        <div class="screenshot-card">
-          <img src="assets/screenshots/students.png" alt="Project Nova Student Management" loading="lazy" />
-          <div class="caption">NEURAL_COHORT — Student Registry</div>
-        </div>
-        <div class="screenshot-card">
-          <img src="assets/screenshots/teachers.png" alt="Project Nova Teacher Management" loading="lazy" />
-          <div class="caption">EXPERT_NODES — Faculty Registry</div>
-        </div>
+    <section class="section" id="preview">
+      <header class="section-head">
+        <p class="eyebrow">Live Preview</p>
+        <h2>The desktop client, as shipped</h2>
+        <p>Real screenshots from Project Nova on Windows — the marketing site matches the product, not the other way around.</p>
+      </header>
+      <div class="shot-grid">
+        <figure class="shot">
+          <img src="assets/screenshots/login.png" alt="Login screen" loading="lazy" />
+          <figcaption>Access Core — Login</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/dashboard.png" alt="Dashboard" loading="lazy" />
+          <figcaption>System Dashboard</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/students.png" alt="Students" loading="lazy" />
+          <figcaption>Neural Cohort — Students</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/teachers.png" alt="Faculty" loading="lazy" />
+          <figcaption>Expert Nodes — Faculty</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Demo limitations -->
-    <section id="demo-limits">
-      <div class="section-header">
-        <div class="label-caps">Demo Build</div>
-        <h2>What's Included in Demo</h2>
-        <p>The demo lets you explore core modules with limited capacity. Your School ID and credentials stay permanent when the full version releases — if you already paid, the full download is free.</p>
-      </div>
-
-      <div class="limits-grid">
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">👥</span>
-          <div><strong>Max 5 Students</strong><span>Add up to 5 student records in demo</span></div>
-        </div>
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">🎓</span>
-          <div><strong>Max 3 Teachers</strong><span>Add up to 3 faculty records in demo</span></div>
-        </div>
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">🧪</span>
-          <div><strong>Limited Simulations</strong><span>Preview only — full sims in licensed version</span></div>
-        </div>
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">📅</span>
-          <div><strong>Timetable Preview</strong><span>Sample weekly grid — no editing in demo</span></div>
-        </div>
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">🧪</span>
-          <div><strong>4 Interactive Sims</strong><span>Force/Motion, Circulation, Maths, English — live controls</span></div>
-        </div>
-        <div class="limit-item glass-panel">
-          <span class="limit-icon">🏦</span>
-          <div><strong>Finance Preview</strong><span>License &amp; pricing info — sample transactions only</span></div>
-        </div>
-      </div>
+    <section class="section" id="demo">
+      <header class="section-head">
+        <p class="eyebrow">Demo Build</p>
+        <h2>What you get in the demo</h2>
+        <p>Limited capacity so you can evaluate the workflow. Your School ID stays permanent when the full release ships — and if you already paid, the full download is free.</p>
+      </header>
+      <ul class="demo-grid">
+        <li><strong>Max 5 students</strong>Try the full registry flow</li>
+        <li><strong>Max 3 teachers</strong>Sample faculty records</li>
+        <li><strong>4 interactive sims</strong>Force/Motion, Circulation, Maths, English</li>
+        <li><strong>Timetable preview</strong>Sample weekly grid (view only)</li>
+        <li><strong>Finance preview</strong>License &amp; pricing sample data</li>
+        <li><strong>Offline desktop</strong>Windows 10/11 · no always-on cloud</li>
+      </ul>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing">
-      <div class="section-header">
-        <div class="label-caps">Licensing</div>
-        <h2>Choose Your Plan</h2>
-        <p>One license per school. Book within 7 days and lock in early bird pricing.</p>
-      </div>
-
-      <div class="pricing-grid">
-        <div class="price-card glass-panel featured">
-          <div class="price-badge">EARLY BIRD — 7 DAYS</div>
-          <h3>Annual Plan</h3>
-          <div class="price-amount"><span class="currency">Rs.</span> 10,000</div>
-          <div class="price-original">Book demo now — limited offer</div>
-          <ul class="price-features">
-            <li>1 school = 1 license</li>
+    <section class="section" id="pricing">
+      <header class="section-head">
+        <p class="eyebrow">Licensing</p>
+        <h2>One license per school</h2>
+        <p>Book within 7 days to lock early bird pricing.</p>
+      </header>
+      <div class="price-grid">
+        <article class="price-card">
+          <p class="price-badge">Early bird · 7 days</p>
+          <h3>Annual</h3>
+          <p class="amount"><span>Rs.</span> 10,000 <small>/ year</small></p>
+          <ul>
             <li>After 7 days: Rs. 20,000 / year</li>
             <li>Renewal: Rs. 15,000 / year</li>
-            <li>All 9 modules (as released)</li>
+            <li>1 school = 1 license</li>
+            <li>All modules as released</li>
             <li>Unlimited students &amp; teachers</li>
             <li>Full simulation library</li>
             <li>Offline desktop software</li>
           </ul>
-          <a href="#download" class="btn-primary" style="width:100%;justify-content:center;">DOWNLOAD DEMO &amp; BOOK</a>
-        </div>
-
-        <div class="price-card glass-panel featured">
-          <div class="price-badge">EARLY BIRD — 7 DAYS</div>
-          <h3>Triennial Plan (3 Years)</h3>
-          <div class="price-amount"><span class="currency">Rs.</span> 25,000</div>
-          <div class="price-original">Book demo now — limited offer</div>
-          <ul class="price-features">
-            <li>1 school = 1 license</li>
+          <a class="btn btn-block" href="#download">Download Demo &amp; Book</a>
+        </article>
+        <article class="price-card">
+          <p class="price-badge">Early bird · 7 days</p>
+          <h3>Triennial · 3 years</h3>
+          <p class="amount"><span>Rs.</span> 25,000</p>
+          <ul>
             <li>After 7 days: Rs. 37,000</li>
             <li>Triennial renewal: Rs. 42,000</li>
-            <li>All 9 modules (as released)</li>
+            <li>1 school = 1 license</li>
+            <li>All modules as released</li>
             <li>Unlimited students &amp; teachers</li>
             <li>Full simulation library</li>
             <li>Offline desktop software</li>
           </ul>
-          <a href="#download" class="btn-primary" style="width:100%;justify-content:center;">DOWNLOAD DEMO &amp; BOOK</a>
-        </div>
+          <a class="btn btn-block" href="#download">Download Demo &amp; Book</a>
+        </article>
       </div>
-
-      <div class="pricing-note glass-panel" style="margin-top:24px;padding:20px;text-align:center;">
-        <p style="font-size:13px;color:var(--on-surface-variant);margin:0 0 10px 0;">
-          <strong style="color:var(--primary-container);">After 7 days:</strong>
-          Annual Rs. 20,000/yr (renewal Rs. 15,000/yr) &nbsp;·&nbsp;
-          Triennial Rs. 37,000 (renewal Rs. 42,000)
-        </p>
-        <p style="font-size:13px;color:var(--on-surface-variant);margin:0;">
-          <strong style="color:var(--secondary-fixed);">Permanent School ID:</strong>
-          Your School Code (e.g. NOVA-5849), username, phone, email, and school name are set once at activation and never change — demo or full version. Same credentials forever.
-        </p>
+      <div class="note-panel">
+        <p><strong>After early bird:</strong> Annual Rs. 20,000/yr (renewal Rs. 15,000/yr) · Triennial Rs. 37,000 (renewal Rs. 42,000).</p>
+        <p><strong>Permanent School ID:</strong> School Code (e.g. NOVA-5849), username, phone, email, and school name are set once at activation and never change — demo or full version.</p>
       </div>
     </section>
 
-    <!-- How to get started -->
-    <section id="steps">
-      <div class="section-header">
-        <div class="label-caps">Deployment Sequence</div>
-        <h2>How to Get Started</h2>
-        <p>From demo activation to full release — your School ID stays permanent.</p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="step-card glass-panel">
-          <div class="step-num">01</div>
-          <h4>Activate Demo</h4>
-          <p>Download the demo, choose Annual or Triennial, submit payment, and wait for admin approval. You receive a School Code (e.g. NOVA-5849).</p>
-        </div>
-        <div class="step-card glass-panel">
-          <div class="step-num">02</div>
-          <h4>School ID Is Permanent</h4>
-          <p>School Code, username, password, phone, email, and school name are locked at activation. They never change when you move to the full version.</p>
-        </div>
-        <div class="step-card glass-panel">
-          <div class="step-num">03</div>
-          <h4>Full Release — Free If Paid</h4>
-          <p>When the full software publishes, download it free if you already paid during demo. No re-payment. Log in with the same School ID and credentials.</p>
-        </div>
-        <div class="step-card glass-panel">
-          <div class="step-num">04</div>
-          <h4>Renew Later</h4>
-          <p>Renewal is only due after your license period ends — Annual Rs. 15,000/year or Triennial Rs. 42,000. Not charged again at full download.</p>
-        </div>
-      </div>
+    <section class="section" id="steps">
+      <header class="section-head">
+        <p class="eyebrow">Deployment</p>
+        <h2>From demo to full release</h2>
+        <p>Your School ID stays permanent across the entire path.</p>
+      </header>
+      <ol class="steps">
+        <li>
+          <h3>Activate the demo</h3>
+          <p>Download, choose Annual or Triennial, submit payment, wait for admin approval. You receive a School Code.</p>
+        </li>
+        <li>
+          <h3>School ID is permanent</h3>
+          <p>Code, username, password, phone, email, and school name lock at activation — unchanged in the full version.</p>
+        </li>
+        <li>
+          <h3>Full release — free if paid</h3>
+          <p>When the full build publishes, download it free if you already paid. Same credentials.</p>
+        </li>
+        <li>
+          <h3>Renew later</h3>
+          <p>Renewal only after your term ends — Annual Rs. 15,000/year or Triennial Rs. 42,000.</p>
+        </li>
+      </ol>
     </section>
 
-    <!-- Download -->
-    <section id="download">
-      <div class="download-box glass-panel">
-        <div class="label-caps">Demo Installer</div>
-        <h3>Download Project Nova Demo</h3>
+    <section class="section" id="download">
+      <div class="download-panel">
+        <p class="eyebrow">Demo Installer</p>
+        <h2>Download Project Nova Demo</h2>
         <p>Windows 10/11 · 64-bit · Offline-ready desktop application</p>
-        <a href="downloads/Project-Nova-Demo.exe" class="btn-primary" id="download-btn" download>
-          ⬇ DOWNLOAD Project-Nova-Demo.exe
-        </a>
-        <div class="download-meta">
-          <span>BUILD: V1.0_DEMO</span>
-          <span>PLATFORM: WIN_x64</span>
-          <span>SIZE: ~15 MB</span>
-          <span>STATUS: ACTIVE</span>
-        </div>
+        <a class="btn" href="downloads/Project-Nova-Demo.exe" id="download-btn" download>Download Project-Nova-Demo.exe</a>
+        <p class="meta">Build V1.0 Demo · Win x64</p>
       </div>
     </section>
 
-  </div>
+  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-brand">PROJECT <span>NOVA</span></div>
-    <p class="footer-copy">© Project Nova (2026). All rights reserved. This is a complete school operating system.</p>
+  <footer class="footer">
+    <p class="footer-brand">PROJECT <span>NOVA</span></p>
+    <p>© Project Nova (2026). All rights reserved. This is a complete school operating system.</p>
     <div class="footer-links">
       <a href="#modules">Modules</a>
       <a href="#pricing">Pricing</a>
