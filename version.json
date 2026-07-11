@@ -6,5 +6,5 @@
   "message": "Update 1.0.8: Animated heart valve leaflets + Science behind on all sims + plain-English Bio-Synth labels. Close all Nova windows and reopen (or DOWNLOAD UPDATE).",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
   "sha256": "13596d74b3cc296a3bd0cf1bc52d76ae498f3f09731bbfa5d84ec8239a76288e",
-  "releaseNotes": "1.0.8 — Valve cusps open/shut with heartbeat (freeze on MI). Science behind panels for circulation, force & motion, maths, english. Sinus rhythm = normal heartbeat; telemetry = live readings; alarm = dangerous rhythm warning."
+  "releaseNotes": "1.0.8 - Valve cusps open/shut with heartbeat (freeze on MI). Science behind panels for circulation, force and motion, maths, english. Sinus rhythm = normal heartbeat; telemetry = live readings; alarm = dangerous rhythm warning. Includes BOM-safe updater."
 }
