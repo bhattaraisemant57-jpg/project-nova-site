@@ -929,6 +929,14 @@ a {
   margin-bottom: 22px;
 }
 
+.dl-smartscreen-note {
+  max-width: 36rem;
+  margin: 0 auto 22px !important;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 .dl-meta {
   display: flex;
   flex-wrap: wrap;
