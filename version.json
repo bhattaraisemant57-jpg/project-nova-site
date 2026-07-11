@@ -1,10 +1,10 @@
 {
   "version": "1.0.8",
-  "type": "minor",
+  "type": "major",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Update 1.0.8: Updater fixed (UTF-8 BOM + visible DOWNLOAD UPDATE). Use CHECK FOR UPDATES on the login screen if needed.",
+  "message": "Update 1.0.8: Animated heart valve leaflets + Science behind on all sims + plain-English Bio-Synth labels. Close all Nova windows and reopen (or DOWNLOAD UPDATE).",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "2d1188266af887cb3a0d73a1b58ea313d9d289718d2229c762125d03944ff887",
-  "releaseNotes": "1.0.8 — BOM-safe version.json parse (root cause of silent update failure). Unmissable DOWNLOAD UPDATE modal. CHECK FOR UPDATES on login + Settings. Visible installer fallback. If in-app update still fails on a very old build, download fresh from pronova.site."
+  "sha256": "13596d74b3cc296a3bd0cf1bc52d76ae498f3f09731bbfa5d84ec8239a76288e",
+  "releaseNotes": "1.0.8 — Valve cusps open/shut with heartbeat (freeze on MI). Science behind panels for circulation, force & motion, maths, english. Sinus rhythm = normal heartbeat; telemetry = live readings; alarm = dangerous rhythm warning."
 }
