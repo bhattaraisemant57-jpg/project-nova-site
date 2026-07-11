@@ -1,10 +1,10 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Small update: BIO-SYNTH V2.4 holographic heart (ECG telemetry, crisis scenarios, labeled anatomy) + snappy Force & Motion drop FX.",
+  "message": "Update 1.0.4: BIO-SYNTH V2.4 holographic heart + snappy Force & Motion (~1–2s drop). Close all windows and reopen to install.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "e185d55973565678a899440c2fc9d15597ca566a48ca734807179dfca57ad4e2",
-  "releaseNotes": "1.0.3 — Bio-Synth V2.4 HUD matching demo mockup: LIVE TELEMETRY, holographic labeled heart, EMERGENCY_SHUTDOWN / RECALIBRATE_NODES, SIMULATE_EVENT (MI, Arrhythmia, Hypertension, Hypovolemic Shock). Force & Motion: ~1–2s vacuum drop with impact FX. Small update: re-open the app to apply."
+  "sha256": "bde1a5d237706ac0201ad86b8728d4c61ec1c9ce8d0074d6065452937ef241a9",
+  "releaseNotes": "1.0.4 — Same Bio-Synth V2.4 + fast physics as 1.0.3, new build number so the in-app updater must offer DOWNLOAD UPDATE. Simulations → Bio-Synth Heart. Force & Motion vacuum drop ~1–2s."
 }
