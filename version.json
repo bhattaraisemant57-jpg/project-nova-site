@@ -1,10 +1,10 @@
-{
-  "version": "1.0.2",
+﻿{
+  "version": "1.0.3",
   "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Small update: encrypted cloud backup (OneDrive/Google Drive), plan confirmation on activation, and full-version promo copy removed.",
+  "message": "Small update: BIO-SYNTH V2.4 holographic heart (ECG telemetry, crisis scenarios, labeled anatomy) + snappy Force & Motion drop FX.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "9e3d7d51b11e1760594ebabe3669501fdcae1a4dab667be178a43ca7057df720",
-  "releaseNotes": "1.0.2 — Cloud Backup (AES-GCM + sync folder), Annual/Triennial confirm step, logo branding, purge 'full version is live' UI. Small update: re-open the app to apply."
+  "sha256": "e185d55973565678a899440c2fc9d15597ca566a48ca734807179dfca57ad4e2",
+  "releaseNotes": "1.0.3 — Bio-Synth V2.4 HUD matching demo mockup: LIVE TELEMETRY, holographic labeled heart, EMERGENCY_SHUTDOWN / RECALIBRATE_NODES, SIMULATE_EVENT (MI, Arrhythmia, Hypertension, Hypovolemic Shock). Force & Motion: ~1–2s vacuum drop with impact FX. Small update: re-open the app to apply."
 }
