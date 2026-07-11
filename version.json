@@ -1,10 +1,10 @@
-{
-  "version": "1.0.4",
+﻿{
+  "version": "1.0.5",
   "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Update 1.0.4: BIO-SYNTH V2.4 holographic heart + snappy Force & Motion (~1–2s drop). Close all windows and reopen to install.",
+  "message": "Update 1.0.5: Realistic Bio-Synth heart+lungs circuit (no neon glow) + fixed Force & Motion drag (coin faster in air; vacuum equal). Close all Nova windows and reopen.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "bde1a5d237706ac0201ad86b8728d4c61ec1c9ce8d0074d6065452937ef241a9",
-  "releaseNotes": "1.0.4 — Same Bio-Synth V2.4 + fast physics as 1.0.3, new build number so the in-app updater must offer DOWNLOAD UPDATE. Simulations → Bio-Synth Heart. Force & Motion vacuum drop ~1–2s."
+  "sha256": "4c744e62e9b1ef9e9971d44c1e374248b3bb8ecb9561e5b7cc59fe32b7a0f089",
+  "releaseNotes": "1.0.5 — Anatomical heart + lungs circulatory path. Force & Motion: feather no longer falls ahead of coin; English outcome panel. Three.js runtime (Godot embed later)."
 }
