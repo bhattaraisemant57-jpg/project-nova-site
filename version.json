@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "minVersion": "1.0.0",
+  "mandatory": false,
+  "message": "A new version of Project Nova is available. Please download the latest installer.",
+  "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
+  "releaseNotes": "Initial public demo build."
+}
