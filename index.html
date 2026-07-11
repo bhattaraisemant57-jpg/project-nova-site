@@ -1,383 +1,365 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Project Nova | Software Release Hub</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<style>
-        :root {
-            --cyan-glow: rgba(0, 219, 231, 0.4);
-            --glass-stroke: rgba(255, 255, 255, 0.1);
-        }
-
-        body {
-            background-color: #10141a;
-            color: #dfe2eb;
-            overflow-x: hidden;
-        }
-
-        .glass-panel {
-            background: rgba(16, 20, 26, 0.6);
-            backdrop-filter: blur(40px);
-            border: 1px solid var(--glass-stroke);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .glow-cyan {
-            box-shadow: 0 0 15px var(--cyan-glow);
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        .scanline {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #00dbe7, transparent);
-            position: absolute;
-            top: 0;
-            animation: scan 4s linear infinite;
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
-        @keyframes scan {
-            0% { top: 0%; }
-            100% { top: 100%; }
-        }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-container": "#27ff97",
-                        "on-primary": "#00363a",
-                        "secondary-fixed": "#5bffa1",
-                        "on-secondary": "#00391d",
-                        "on-primary-fixed": "#002022",
-                        "on-primary-fixed-variant": "#004f54",
-                        "outline-variant": "#3a494b",
-                        "on-background": "#dfe2eb",
-                        "on-secondary-fixed": "#00210e",
-                        "inverse-on-surface": "#2d3137",
-                        "on-tertiary-container": "#934d00",
-                        "surface-container-lowest": "#0a0e14",
-                        "surface-container-low": "#181c22",
-                        "primary-container": "#00f2ff",
-                        "on-surface": "#dfe2eb",
-                        "on-primary-container": "#006a71",
-                        "on-secondary-container": "#00723f",
-                        "background": "#10141a",
-                        "secondary": "#f5fff3",
-                        "inverse-primary": "#00696f",
-                        "surface-bright": "#353940",
-                        "surface-dim": "#10141a",
-                        "outline": "#849495",
-                        "on-secondary-fixed-variant": "#00522c",
-                        "primary-fixed": "#74f5ff",
-                        "primary": "#e1fdff",
-                        "surface-container-high": "#262a31",
-                        "surface-variant": "#31353c",
-                        "error-container": "#93000a",
-                        "primary-fixed-dim": "#00dbe7",
-                        "on-tertiary-fixed": "#2f1500",
-                        "on-tertiary": "#4e2600",
-                        "on-surface-variant": "#b9cacb",
-                        "on-error-container": "#ffdad6",
-                        "error": "#ffb4ab",
-                        "tertiary-container": "#ffd2b2",
-                        "tertiary-fixed-dim": "#ffb77f",
-                        "surface": "#10141a",
-                        "surface-container-highest": "#31353c",
-                        "surface-container": "#1c2026",
-                        "tertiary": "#fff5f1",
-                        "on-tertiary-fixed-variant": "#6f3900",
-                        "inverse-surface": "#dfe2eb",
-                        "tertiary-fixed": "#ffdcc4",
-                        "surface-tint": "#00dbe7",
-                        "secondary-fixed-dim": "#00e383",
-                        "on-error": "#690005"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "unit": "4px",
-                        "gutter": "24px",
-                        "margin": "40px",
-                        "container-max": "1440px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "data-lg": ["JetBrains Mono"],
-                        "label-caps": ["JetBrains Mono"],
-                        "display-lg": ["Plus Jakarta Sans"],
-                        "data-sm": ["JetBrains Mono"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                        "data-lg": ["18px", {"lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                        "label-caps": ["10px", {"lineHeight": "12px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "data-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-                    }
-                }
-            }
-        }
-    </script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Nova | Complete School Operating System</title>
+  <meta name="description" content="Project Nova — A complete school operating system. ERP, student management, faculty management, simulations & more. Download the demo today." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 right-0 w-full md:w-[calc(100%-16rem)] h-16 bg-surface-dim/40 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-margin z-50">
-<div class="flex items-center gap-4">
-<span class="font-headline-md text-headline-md text-primary uppercase tracking-widest">SOFTWARE RELEASE HUB</span>
-<span class="hidden md:block h-6 w-px bg-white/10"></span>
-<span class="hidden md:block font-label-caps text-label-caps text-on-surface-variant">V1.0.42_STABLE</span>
-</div>
-<div class="flex items-center gap-6">
-<div class="hidden lg:flex items-center bg-black/30 border-b-2 border-primary-fixed-dim px-3 py-1">
-<span class="material-symbols-outlined text-primary-fixed-dim text-sm mr-2" data-icon="search">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-data-sm font-data-sm text-primary placeholder:text-on-surface-variant/40 w-48" placeholder="SEARCH ASSETS..." type="text"/>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="sensors">sensors</span>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="help_outline">help_outline</span>
-</div>
-</div>
-</nav>
-<!-- Side Navigation Bar -->
-<aside class="hidden md:flex fixed left-0 top-0 h-full w-64 bg-surface-dim/40 backdrop-blur-xl border-r border-white/10 shadow-[0_0_20px_rgba(0,219,231,0.1)] flex-col py-margin px-4 z-50">
-<div class="mb-12">
-<h1 class="font-display-lg text-display-lg text-primary tracking-tighter leading-none">PROJECT NOVA</h1>
-<p class="font-label-caps text-label-caps text-on-surface-variant mt-2 flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
-            Hub Online
-        </p>
-</div>
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-primary font-bold border-r-2 border-primary bg-primary/5" href="#">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-<span class="font-body-md text-body-md">Releases</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-<span class="font-body-md text-body-md">Documentation</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
-<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
-<span class="font-body-md text-body-md">Licensing</span>
-</a>
-<a class="flex items-center gap-4 py-3 px-4 rounded transition-all duration-300 text-on-surface-variant font-medium hover:bg-primary/10 hover:text-primary" href="#">
-<span class="material-symbols-outlined" data-icon="forum">forum</span>
-<span class="font-body-md text-body-md">Support</span>
-</a>
-</nav>
-<div class="mt-auto p-4 glass-panel rounded mb-4">
-<p class="font-label-caps text-[10px] text-on-surface-variant mb-2">LATEST BUILD</p>
-<p class="font-data-sm text-data-sm text-primary">v1.0.42.0914</p>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="pt-16 md:pl-64 min-h-screen">
-<!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center px-margin py-20 overflow-hidden">
-<div class="relative z-10 container mx-auto max-w-container-max grid lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div>
-<span class="inline-block py-1 px-3 border border-primary-fixed-dim text-primary-fixed-dim font-label-caps text-label-caps mb-4 tracking-widest">DEPLOYMENT_READY</span>
-<h2 class="font-display-lg text-[56px] md:text-[72px] text-primary leading-tight font-bold tracking-tighter">
-                        PROJECT NOVA<br/>
-<span class="text-on-background/80">CORE CLIENT</span>
-</h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-lg leading-relaxed">
-                    Access the industry-leading computational environment for institutional researchers. Optimized for massive parallel simulation processing and high-fidelity 3D visualization.
-                </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="px-10 py-5 bg-primary-fixed-dim text-on-primary font-bold text-xl rounded-sm hover:scale-105 transition-transform glow-cyan flex items-center gap-3" id="download-pc-client">
-<span class="material-symbols-outlined" data-icon="download">download</span>
-                        Download PC Client
-                    </button>
-<button class="px-8 py-5 border border-primary-fixed-dim text-primary-fixed-dim font-bold text-lg rounded-sm hover:bg-primary/10 transition-colors flex items-center gap-3">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-                        Release Notes
-                    </button>
-</div>
-<div class="pt-6 font-data-sm text-data-sm text-on-surface-variant/60 flex items-center gap-6">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span> WIN 10/11 x64</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" data-icon="memory">memory</span> CUDA SUPPORT REQ</span>
-</div>
-</div>
-<div class="relative group hidden lg:block">
-<div class="absolute -inset-1 bg-gradient-to-r from-primary-fixed-dim to-secondary-fixed-dim rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-<div class="glass-panel rounded-xl overflow-hidden aspect-video flex items-center justify-center p-4 relative">
-<div class="scanline"></div>
-<img alt="Software Dashboard Preview" class="w-full h-full object-cover rounded-lg border border-white/5 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk6DeioBpkVMHpwzTUTgSpaBfNgVXWI-u4QyUfudEEX40SYX9eHYiGnwcoGphixt9STnvpTp5XVAWV-gU9a2jyVS8qk0kJ_I40_LxkfDfmEl4sT80bYB2HX08ImD-Y_f4eKqQU-I4qm0XvMO9HO9bHwbigpl-BcTVw8lQozgFzIy8gdlX1QkVi2wLZbK8mq4muWSDYnfb12q4ZIwzuo4rKqMhqgzx32V4U5Fcd_8zDFuoURTQo2cTzSgDrJMMV3FER8euUhbynEXhn"/>
-<div class="absolute top-8 left-8 font-data-sm text-data-sm text-primary tracking-widest bg-black/60 p-2 border-l-2 border-primary">
-                        BUILD_ID: NV_2024_09
-                    </div>
-</div>
-</div>
-</div>
-</section>
-<!-- Capabilities Section -->
-<section class="px-margin py-24 bg-surface-container-lowest relative">
-<div class="container mx-auto max-w-container-max">
-<div class="mb-16">
-<h3 class="font-headline-md text-headline-md text-primary mb-2">INTEGRATED MODULES</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">The core client includes these specialized research environments.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Physics -->
-<div class="glass-panel p-6 group hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4" data-icon="dynamic_form">dynamic_form</span>
-<h4 class="font-headline-md text-primary text-xl mb-2">Computational Physics</h4>
-<p class="font-body-md text-sm text-on-surface-variant">Quantum field analysis and thermodynamic modeling with real-time vector visualization.</p>
-</div>
-<!-- Chemistry -->
-<div class="glass-panel p-6 group hover:border-secondary-fixed-dim transition-colors">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-3xl mb-4" data-icon="science">science</span>
-<h4 class="font-headline-md text-primary text-xl mb-2">Molecular Chemistry</h4>
-<p class="font-body-md text-sm text-on-surface-variant">High-precision stoichiometric engine with atomic bond simulation capabilities.</p>
-</div>
-<!-- Biology -->
-<div class="glass-panel p-6 group hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary-fixed-dim text-3xl mb-4" data-icon="dna">dns</span>
-<h4 class="font-headline-md text-primary text-xl mb-2">Synthetic Biology</h4>
-<p class="font-body-md text-sm text-on-surface-variant">Advanced genetic sequencing and cellular behavior modeling in virtual environments.</p>
-</div>
-<!-- Math -->
-<div class="glass-panel p-6 group hover:border-secondary-fixed-dim transition-colors">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-3xl mb-4" data-icon="calculate">calculate</span>
-<h4 class="font-headline-md text-primary text-xl mb-2">Advanced Math</h4>
-<p class="font-body-md text-sm text-on-surface-variant">Topology mapping and multidimensional visualization for complex theoretical research.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Licensing & Deployment -->
-<section class="px-margin py-32 border-y border-white/5">
-<div class="container mx-auto max-w-container-max">
-<div class="text-center mb-20">
-<h3 class="font-headline-md text-headline-md text-primary text-4xl mb-4">DEPLOYMENT SEQUENCE</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Standard institutional protocol for software acquisition and network activation.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<!-- Step 1 -->
-<div class="space-y-6">
-<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-primary-fixed-dim">
-<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="cloud_download">cloud_download</span>
-</div>
-<h5 class="font-headline-md text-headline-md text-primary">01. Acquisition</h5>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Download the Nova Core Client from this hub. The installer will automatically perform a system audit to ensure CUDA and VRAM requirements are met for local processing.
-                    </p>
-</div>
-<!-- Step 2 -->
-<div class="space-y-6">
-<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-secondary-fixed-dim">
-<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="vpn_key">vpn_key</span>
-</div>
-<h5 class="font-headline-md text-headline-md text-primary">02. Institutional Licensing</h5>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Authentication is managed via institutional SAML/SSO. Licenses are allocated by your organization's research administrator and bound to your encrypted hardware ID.
-                    </p>
-</div>
-<!-- Step 3 -->
-<div class="space-y-6">
-<div class="w-16 h-16 glass-panel rounded-full flex items-center justify-center border-primary">
-<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
-</div>
-<h5 class="font-headline-md text-headline-md text-primary">03. Local Environment</h5>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Upon first launch, the client initializes a secure local sandbox. All simulation data remains encrypted on your local workstation until manually synced to institutional repositories.
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="px-margin py-32 relative overflow-hidden">
-<div class="container mx-auto max-w-container-max glass-panel p-12 md:p-20 relative rounded-2xl border-primary-fixed-dim/30">
-<div class="grid lg:grid-cols-2 gap-12 items-center">
-<div>
-<h3 class="font-display-lg text-display-lg text-primary mb-6">READY TO INSTALL?</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-10 text-xl leading-relaxed">
-                        Start your research with the latest version of Project Nova. Version 1.0.42 includes enhanced multi-threading and a revamped physics engine.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="px-10 py-5 bg-primary-fixed-dim text-on-primary font-bold text-xl rounded hover:scale-105 transition-transform glow-cyan">
-                            START DOWNLOAD NOW
-                        </button>
-<button class="px-10 py-5 border border-primary-fixed-dim text-primary-fixed-dim font-bold text-xl rounded hover:bg-primary/10 transition-colors">
-                            VIEW SYSTEM REQS
-                        </button>
-</div>
-</div>
-<div class="hidden lg:block">
-<div class="space-y-4 font-data-sm text-data-sm bg-black/40 p-6 border-l-4 border-primary-fixed-dim">
-<p class="text-primary-fixed-dim flex justify-between"><span>DISTRIBUTION_STATUS:</span> <span>[ ACTIVE ]</span></p>
-<p class="text-on-surface-variant flex justify-between"><span>SHA-256 CHECK:</span> <span>VERIFIED</span></p>
-<p class="text-on-surface-variant flex justify-between"><span>MIRROR_LOCATION:</span> <span>GLOBAL_CDN_04</span></p>
-<p class="text-secondary-fixed-dim flex justify-between"><span>CURRENT_LOAD:</span> <span>LOW_LATENCY</span></p>
-<div class="h-2 w-full bg-white/5 rounded-full mt-4 overflow-hidden">
-<div class="h-full bg-primary-fixed-dim w-[92%] animate-pulse"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="px-margin py-12 border-t border-white/10 bg-surface-dim">
-<div class="container mx-auto max-w-container-max flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col items-center md:items-start">
-<span class="font-display-lg text-headline-md text-primary tracking-tighter">PROJECT NOVA</span>
-<p class="font-label-caps text-label-caps text-on-surface-variant/60 mt-1">© 2024 NEPAL CDC G10. INSTITUTIONAL RELEASE HUB.</p>
-</div>
-<div class="flex gap-8 font-label-caps text-label-caps text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="#">LICENSE AGREEMENT</a>
-<a class="hover:text-primary transition-colors" href="#">SECURITY AUDITS</a>
-<a class="hover:text-primary transition-colors" href="#">SUPPORT TICKETS</a>
-</div>
-<div class="flex items-center gap-4">
-<div class="text-right">
-<p class="font-data-sm text-data-sm text-primary">ENCRYPTED_ENDPOINT</p>
-<p class="font-label-caps text-[8px] text-on-surface-variant uppercase">Release Channel: Stable</p>
-</div>
-<span class="material-symbols-outlined text-secondary-fixed-dim animate-pulse" data-icon="lock">lock</span>
-</div>
-</div>
-</footer>
-</main>
-<script src="assets/js/main.js"></script>
-<script>
-    // Micro-interaction for HUD tracking
-    document.addEventListener('mousemove', (e) => {
-        const glow = document.querySelectorAll('.glow-cyan');
-        glow.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            el.style.setProperty('--x', `${x}px`);
-            el.style.setProperty('--y', `${y}px`);
-        });
-    });
+<body>
 
-    console.log("Nova Release Hub: Production Build Online.");
-</script>
-</body></html>
-<!-- Deploy Test -->
+  <div class="cyber-grid"></div>
+  <div class="scanline"></div>
+
+  <!-- Top navigation -->
+  <header class="top-bar">
+    <div class="top-brand">
+      <div class="top-brand-icon">🧬</div>
+      <div class="top-brand-text">PROJECT <span>NOVA</span></div>
+    </div>
+    <nav class="top-nav">
+      <a href="#modules">Modules</a>
+      <a href="#screenshots">Preview</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <!-- 7-day countdown banner -->
+  <div class="countdown-banner" id="countdown-banner">
+    <span class="offer-text">🔥 EARLY BIRD — 7 DAYS ONLY: Rs. 10,000 Annual / Rs. 25,000 Triennial</span>
+    <div class="countdown-timer">
+      <div class="countdown-unit"><span class="num" id="cd-days">07</span><span class="lbl">Days</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="num" id="cd-hours">00</span><span class="lbl">Hrs</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="num" id="cd-mins">00</span><span class="lbl">Min</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="num" id="cd-secs">00</span><span class="lbl">Sec</span></div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-logo">🧬</div>
+      <h1>PROJECT <span>NOVA</span></h1>
+      <p class="hero-tagline">This is a complete school operating system.</p>
+      <div class="hero-version">SYSTEM CORE V1.0 — DEMO BUILD</div>
+
+      <div class="hero-actions">
+        <a href="#download" class="btn-primary">⬇ DOWNLOAD DEMO</a>
+        <a href="#pricing" class="btn-outline">VIEW PRICING</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="val">9</div>
+          <div class="desc">Integrated Modules</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">6</div>
+          <div class="desc">Live in Demo</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">100%</div>
+          <div class="desc">Offline Ready</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">1</div>
+          <div class="desc">License Per School</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section id="modules">
+      <div class="section-header">
+        <div class="label-caps">Central Module Hub</div>
+        <h2>System Modules</h2>
+        <p>Every module in Project Nova is designed for school operations — from student records to curriculum simulations.</p>
+      </div>
+
+      <div class="module-grid">
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">🔐</span>
+            <span class="mod-card-tag live">LIVE</span>
+          </div>
+          <h3>Access_Core</h3>
+          <p>Authentication &amp; identity management — school activation, login, admin approval.</p>
+          <div class="mod-card-bottom"><span>MOD_01</span><span>LAB_ACTIVE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">📡</span>
+            <span class="mod-card-tag soon">COMING</span>
+          </div>
+          <h3>Live_Telemetry</h3>
+          <p>Real-time data visualization feed for school-wide analytics and monitoring.</p>
+          <div class="mod-card-bottom"><span>MOD_02</span><span>SYSTEM_STABLE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">👥</span>
+            <span class="mod-card-tag live">LIVE</span>
+          </div>
+          <h3>Neural_Cohort</h3>
+          <p>Student registry — add, edit, search, filter by class and section.</p>
+          <div class="mod-card-bottom"><span>MOD_03</span><span>SYNC_COMPLETE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">🧠</span>
+            <span class="mod-card-tag live">LIVE</span>
+          </div>
+          <h3>Expert_Nodes</h3>
+          <p>Faculty management — teacher records, subjects, qualifications.</p>
+          <div class="mod-card-bottom"><span>MOD_04</span><span>VERIFIED</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">📅</span>
+            <span class="mod-card-tag demo">DEMO</span>
+          </div>
+          <h3>Temporal_Grid</h3>
+          <p>Dynamic scheduling &amp; timetable optimization for classes and faculty.</p>
+          <div class="mod-card-bottom"><span>MOD_05</span><span>SCHEDULE_LIVE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">🧪</span>
+            <span class="mod-card-tag demo">DEMO</span>
+          </div>
+          <h3>Curriculum_Sim</h3>
+          <p>Force/Motion, Circulation, Maths &amp; English — 4 interactive previews with live controls.</p>
+          <div class="mod-card-bottom"><span>MOD_06</span><span>SIM_PREVIEW</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">✅</span>
+            <span class="mod-card-tag soon">COMING</span>
+          </div>
+          <h3>Integrity_Check</h3>
+          <p>Assessment &amp; certification engine for exams and grading.</p>
+          <div class="mod-card-bottom"><span>MOD_07</span><span>TEST_PHASE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">🏦</span>
+            <span class="mod-card-tag demo">DEMO</span>
+          </div>
+          <h3>Fiscal_Ledger</h3>
+          <p>License overview, pricing, renewal &amp; transaction history preview.</p>
+          <div class="mod-card-bottom"><span>MOD_08</span><span>BALANCE_STABLE</span></div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-card-top">
+            <span class="mod-card-icon">⚙️</span>
+            <span class="mod-card-tag soon">COMING</span>
+          </div>
+          <h3>System_Tune</h3>
+          <p>Global parameters, environment settings &amp; school configuration.</p>
+          <div class="mod-card-bottom"><span>MOD_09</span><span>CONFIG_OPEN</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots">
+      <div class="section-header">
+        <div class="label-caps">Live Preview</div>
+        <h2>See It In Action</h2>
+        <p>Real screenshots from the Project Nova desktop client — cyberpunk interface, built for schools.</p>
+      </div>
+
+      <div class="screenshot-grid">
+        <div class="screenshot-card">
+          <img src="assets/screenshots/login.png" alt="Project Nova Login Screen" loading="lazy" />
+          <div class="caption">ACCESS_CORE — Login &amp; Authentication</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/dashboard.png" alt="Project Nova Dashboard" loading="lazy" />
+          <div class="caption">SYSTEM_DASHBOARD — Central Module Hub</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/students.png" alt="Project Nova Student Management" loading="lazy" />
+          <div class="caption">NEURAL_COHORT — Student Registry</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/teachers.png" alt="Project Nova Teacher Management" loading="lazy" />
+          <div class="caption">EXPERT_NODES — Faculty Registry</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo limitations -->
+    <section id="demo-limits">
+      <div class="section-header">
+        <div class="label-caps">Demo Build</div>
+        <h2>What's Included in Demo</h2>
+        <p>The demo lets you explore core modules with limited capacity. Your School ID and credentials stay permanent when the full version releases — if you already paid, the full download is free.</p>
+      </div>
+
+      <div class="limits-grid">
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">👥</span>
+          <div><strong>Max 5 Students</strong><span>Add up to 5 student records in demo</span></div>
+        </div>
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">🎓</span>
+          <div><strong>Max 3 Teachers</strong><span>Add up to 3 faculty records in demo</span></div>
+        </div>
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">🧪</span>
+          <div><strong>Limited Simulations</strong><span>Preview only — full sims in licensed version</span></div>
+        </div>
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">📅</span>
+          <div><strong>Timetable Preview</strong><span>Sample weekly grid — no editing in demo</span></div>
+        </div>
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">🧪</span>
+          <div><strong>4 Interactive Sims</strong><span>Force/Motion, Circulation, Maths, English — live controls</span></div>
+        </div>
+        <div class="limit-item glass-panel">
+          <span class="limit-icon">🏦</span>
+          <div><strong>Finance Preview</strong><span>License &amp; pricing info — sample transactions only</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="section-header">
+        <div class="label-caps">Licensing</div>
+        <h2>Choose Your Plan</h2>
+        <p>One license per school. Book within 7 days and lock in early bird pricing.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card glass-panel featured">
+          <div class="price-badge">EARLY BIRD — 7 DAYS</div>
+          <h3>Annual Plan</h3>
+          <div class="price-amount"><span class="currency">Rs.</span> 10,000</div>
+          <div class="price-original">Book demo now — limited offer</div>
+          <ul class="price-features">
+            <li>1 school = 1 license</li>
+            <li>After 7 days: Rs. 20,000 / year</li>
+            <li>Renewal: Rs. 15,000 / year</li>
+            <li>All 9 modules (as released)</li>
+            <li>Unlimited students &amp; teachers</li>
+            <li>Full simulation library</li>
+            <li>Offline desktop software</li>
+          </ul>
+          <a href="#download" class="btn-primary" style="width:100%;justify-content:center;">DOWNLOAD DEMO &amp; BOOK</a>
+        </div>
+
+        <div class="price-card glass-panel featured">
+          <div class="price-badge">EARLY BIRD — 7 DAYS</div>
+          <h3>Triennial Plan (3 Years)</h3>
+          <div class="price-amount"><span class="currency">Rs.</span> 25,000</div>
+          <div class="price-original">Book demo now — limited offer</div>
+          <ul class="price-features">
+            <li>1 school = 1 license</li>
+            <li>After 7 days: Rs. 37,000</li>
+            <li>Triennial renewal: Rs. 42,000</li>
+            <li>All 9 modules (as released)</li>
+            <li>Unlimited students &amp; teachers</li>
+            <li>Full simulation library</li>
+            <li>Offline desktop software</li>
+          </ul>
+          <a href="#download" class="btn-primary" style="width:100%;justify-content:center;">DOWNLOAD DEMO &amp; BOOK</a>
+        </div>
+      </div>
+
+      <div class="pricing-note glass-panel" style="margin-top:24px;padding:20px;text-align:center;">
+        <p style="font-size:13px;color:var(--on-surface-variant);margin:0 0 10px 0;">
+          <strong style="color:var(--primary-container);">After 7 days:</strong>
+          Annual Rs. 20,000/yr (renewal Rs. 15,000/yr) &nbsp;·&nbsp;
+          Triennial Rs. 37,000 (renewal Rs. 42,000)
+        </p>
+        <p style="font-size:13px;color:var(--on-surface-variant);margin:0;">
+          <strong style="color:var(--secondary-fixed);">Permanent School ID:</strong>
+          Your School Code (e.g. NOVA-5849), username, phone, email, and school name are set once at activation and never change — demo or full version. Same credentials forever.
+        </p>
+      </div>
+    </section>
+
+    <!-- How to get started -->
+    <section id="steps">
+      <div class="section-header">
+        <div class="label-caps">Deployment Sequence</div>
+        <h2>How to Get Started</h2>
+        <p>From demo activation to full release — your School ID stays permanent.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card glass-panel">
+          <div class="step-num">01</div>
+          <h4>Activate Demo</h4>
+          <p>Download the demo, choose Annual or Triennial, submit payment, and wait for admin approval. You receive a School Code (e.g. NOVA-5849).</p>
+        </div>
+        <div class="step-card glass-panel">
+          <div class="step-num">02</div>
+          <h4>School ID Is Permanent</h4>
+          <p>School Code, username, password, phone, email, and school name are locked at activation. They never change when you move to the full version.</p>
+        </div>
+        <div class="step-card glass-panel">
+          <div class="step-num">03</div>
+          <h4>Full Release — Free If Paid</h4>
+          <p>When the full software publishes, download it free if you already paid during demo. No re-payment. Log in with the same School ID and credentials.</p>
+        </div>
+        <div class="step-card glass-panel">
+          <div class="step-num">04</div>
+          <h4>Renew Later</h4>
+          <p>Renewal is only due after your license period ends — Annual Rs. 15,000/year or Triennial Rs. 42,000. Not charged again at full download.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download">
+      <div class="download-box glass-panel">
+        <div class="label-caps">Demo Installer</div>
+        <h3>Download Project Nova Demo</h3>
+        <p>Windows 10/11 · 64-bit · Offline-ready desktop application</p>
+        <a href="downloads/Project-Nova-Demo.exe" class="btn-primary" id="download-btn" download>
+          ⬇ DOWNLOAD Project-Nova-Demo.exe
+        </a>
+        <div class="download-meta">
+          <span>BUILD: V1.0_DEMO</span>
+          <span>PLATFORM: WIN_x64</span>
+          <span>SIZE: ~15 MB</span>
+          <span>STATUS: ACTIVE</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-brand">PROJECT <span>NOVA</span></div>
+    <p class="footer-copy">© Project Nova (2026). All rights reserved. This is a complete school operating system.</p>
+    <div class="footer-links">
+      <a href="#modules">Modules</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+      <a href="mailto:contact@pronova.site">Contact</a>
+    </div>
+  </footer>
+
+  <script src="js/countdown.js"></script>
+</body>
+</html>
