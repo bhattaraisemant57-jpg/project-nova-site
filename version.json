@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.5",
+  "version": "1.0.7",
   "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Update 1.0.5: Realistic Bio-Synth heart+lungs circuit (no neon glow) + fixed Force & Motion drag (coin faster in air; vacuum equal). Close all Nova windows and reopen.",
+  "message": "Update 1.0.7: Fixed in-app updater — DOWNLOAD UPDATE now appears when a newer build is available. Close all Nova windows and reopen, or use CHECK FOR UPDATES.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "4c744e62e9b1ef9e9971d44c1e374248b3bb8ecb9561e5b7cc59fe32b7a0f089",
-  "releaseNotes": "1.0.5 — Anatomical heart + lungs circulatory path. Force & Motion: feather no longer falls ahead of coin; English outcome panel. Three.js runtime (Godot embed later)."
+  "sha256": "0a00d83085662017fc223e58bb16be3083d6625a491012c5ba4b607d79ffca2a",
+  "releaseNotes": "1.0.7 — Forced DOWNLOAD UPDATE modal when outdated. CHECK FOR UPDATES on login + Settings. Rust fetch for version.json. Semver compare. Visible errors on network failure."
 }
