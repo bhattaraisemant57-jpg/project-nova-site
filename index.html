@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Nova | Complete School Operating System</title>
   <meta name="description" content="Project Nova — A complete school operating system. Download the Windows demo. Early bird licensing for schools." />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Subset weights + display=swap; non-blocking font load -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" /></noscript>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -129,7 +132,7 @@
           </div>
           <picture>
             <source type="image/webp" srcset="assets/screenshots/dashboard.webp" />
-            <img src="assets/screenshots/dashboard.png" alt="Project Nova system dashboard" width="1024" height="575" fetchpriority="high" decoding="async" />
+            <img src="assets/screenshots/dashboard.webp" alt="Project Nova system dashboard" width="960" height="540" fetchpriority="high" decoding="async" />
           </picture>
         </div>
       </section>
@@ -239,7 +242,7 @@
             <div class="viewport-chrome mono"><span>FEED_02 · ACCESS_CORE</span></div>
             <picture>
               <source type="image/webp" srcset="assets/screenshots/login.webp" />
-              <img src="assets/screenshots/login.png" alt="Login" width="1024" height="575" loading="lazy" decoding="async" />
+              <img src="assets/screenshots/login.webp" alt="Login" width="640" height="360" loading="lazy" decoding="async" />
             </picture>
           </figure>
           <figure class="viewport-frame sm">
@@ -247,7 +250,7 @@
             <div class="viewport-chrome mono"><span>FEED_03 · NEURAL_COHORT</span></div>
             <picture>
               <source type="image/webp" srcset="assets/screenshots/students.webp" />
-              <img src="assets/screenshots/students.png" alt="Students" width="1024" height="575" loading="lazy" decoding="async" />
+              <img src="assets/screenshots/students.webp" alt="Students" width="640" height="360" loading="lazy" decoding="async" />
             </picture>
           </figure>
           <figure class="viewport-frame sm">
@@ -255,7 +258,7 @@
             <div class="viewport-chrome mono"><span>FEED_04 · EXPERT_NODES</span></div>
             <picture>
               <source type="image/webp" srcset="assets/screenshots/teachers.webp" />
-              <img src="assets/screenshots/teachers.png" alt="Faculty" width="1024" height="575" loading="lazy" decoding="async" />
+              <img src="assets/screenshots/teachers.webp" alt="Faculty" width="640" height="360" loading="lazy" decoding="async" />
             </picture>
           </figure>
           <figure class="viewport-frame sm">
@@ -263,7 +266,7 @@
             <div class="viewport-chrome mono"><span>FEED_01 · SYSTEM_DASHBOARD</span></div>
             <picture>
               <source type="image/webp" srcset="assets/screenshots/dashboard.webp" />
-              <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="1024" height="575" loading="lazy" decoding="async" />
+              <img src="assets/screenshots/dashboard.webp" alt="Dashboard" width="640" height="360" loading="lazy" decoding="async" />
             </picture>
           </figure>
         </div>
@@ -381,7 +384,7 @@
           <h2>Download Project Nova Demo</h2>
           <p>Windows 10/11 · 64-bit · Offline-ready desktop application</p>
           <p class="dl-smartscreen-note">If Windows shows a SmartScreen warning, click More info → Run anyway. Project Nova is a legitimate unsigned demo build.</p>
-          <a class="btn btn-glow" href="downloads/Project-Nova-Demo.exe" id="download-btn" download>Download Project-Nova-Demo.exe</a>
+          <a class="btn btn-glow" href="downloads/Project-Nova-Demo.exe" id="download-btn" download="Project-Nova-Demo.exe" rel="noopener">Download Project-Nova-Demo.exe</a>
           <div class="dl-meta mono">
             <span>BUILD: V1.0_DEMO</span>
             <span>PLATFORM: WIN_x64</span>
