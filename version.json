@@ -1,10 +1,10 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "small",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Small update: VIEW SCREENSHOT and other fixes. The app will install this automatically — no uninstall needed.",
+  "message": "Small update: encrypted cloud backup (OneDrive/Google Drive), plan confirmation on activation, and full-version promo copy removed.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "41584284b98c2432c2882eb5ab5a24e5b8035ac6ca7cbc56ee8116ec84045305",
-  "releaseNotes": "1.0.1 — Auto-updater (download+install), VIEW SCREENSHOT admin fixes, and latest demo fixes. Small update: re-open the app to apply."
+  "sha256": "9e3d7d51b11e1760594ebabe3669501fdcae1a4dab667be178a43ca7057df720",
+  "releaseNotes": "1.0.2 — Cloud Backup (AES-GCM + sync folder), Annual/Triennial confirm step, logo branding, purge 'full version is live' UI. Small update: re-open the app to apply."
 }
