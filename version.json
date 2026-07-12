@@ -1,10 +1,10 @@
 {
-    "version":  "1.0.9",
+    "version":  "1.1.0",
     "type":  "major",
     "minVersion":  "1.0.0",
     "mandatory":  false,
-    "message":  "Update to the latest version - transparent anatomical heart, live sim outcomes, causes and effects panels. Close all Nova windows and reopen, then click UPDATE NOW.",
+    "message":  "Update to 1.1.0 - Developer panel (renamed from Admin), secure DEV login, multi-PC activation sync via Supabase. Close all Nova windows and reopen, then click UPDATE NOW.",
     "downloadUrl":  "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-    "sha256":  "20a7b589c1edd12903c6b962eb5a591a034ea183ead9e7ad1453870251d633dd",
-    "releaseNotes":  "1.0.9 - Update popup title UPDATE NOW/Later. Transparent glass/flesh heart with visible chambers + valves + lungs path. Causes/effects cards per experiment (MI, arrhythmia, HTN, shock, arrest, HF). Live outcomes from HR/SV/TPR/volume. Physics/maths/english outcomes from computed values."
+    "sha256":  "1cb84f0a4302b7fb78bbf2d8aff4423559d032403c446dbea065f178ab5d1873",
+    "releaseNotes":  "1.1.0 - Admin Panel renamed to Developer. bcrypt-protected DEV_USERNAME/DEV_PASSWORD. Cloud sync activations across PCs with Supabase. Approve/Reject updates cloud+local and emails School Code."
 }
