@@ -1,10 +1,10 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "type": "major",
   "minVersion": "1.0.0",
-  "mandatory": false,
-  "message": "Update to 1.1.1 - Fixes UPDATE NOW Windows error (cannot find '\\\\'). Close Nova, then click UPDATE NOW. If auto-update still fails on an older build, download the installer once from pronova.site and run it manually.",
+  "mandatory": true,
+  "message": "Update to 1.1.2 - Critical database migration fix. Close Nova, delete %APPDATA%\\site.pronova.demo\\nova.db (backup first if you need data), then install this update and reopen.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "cbf3e6a8cd8703444d07257d53a32e8015fca889c041d28dc5ed9c70302af690",
-  "releaseNotes": "1.1.1 - Fix updater launching empty path \\\\. Installer downloads to %TEMP%\\Project-Nova-Update-1.1.1.exe and is verified before launch. One manual install may be needed if you are stuck on a broken updater."
+  "sha256": "4a63adb9ecf987304cbe1994f1b40ccbe64f9ed889a5c0c8f862b2404363d212",
+  "releaseNotes": "1.1.2 - Fix SQLite migration 12 (near \"-\" syntax error). Migration SQL is now ASCII-only inline. Delete nova.db once, then reinstall/reopen."
 }
