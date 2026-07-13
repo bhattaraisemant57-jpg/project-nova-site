@@ -1,10 +1,10 @@
 {
-  "version": "1.1.6",
+  "version": "1.2.0",
   "type": "major",
   "minVersion": "1.0.0",
   "mandatory": true,
-  "message": "Update to 1.1.6 - Full cloud sync plus fixed auto-updater. Close Nova, install UPDATE NOW, then reopen.",
+  "message": "Update to 1.2.0 - School accounting, teacher class assign, auto timetable, smart fee reminders. Close Nova, install UPDATE NOW, then reopen.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "706ccbeaf2a1fb188e2bd1bf3f704acfec7a58ff85bdfa19ce75cf6bd374634b",
-  "releaseNotes": "1.1.6 - Cloud sync (AES-GCM vault + row sync) + auto-relaunch updater + simple update dialog + migration 12 fix + Developer panel."
+  "sha256": "f69b85219164418daa055db2274415190fa2c6df12378d7d405684947302f6a6",
+  "releaseNotes": "1.2.0 final-prep - Fiscal accountancy (fee types, structures, student ledger, discounts, partial pay, print bills), Principal teacher class assignment + Teacher HQ live classes, Temporal_Grid auto routine with conflict detection, Smart Fee Reminder drafts (EN/NP copy), academic year rollover stub. Includes cloud sync boolean-to-integer fix for Supabase."
 }
