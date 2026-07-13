@@ -1,10 +1,10 @@
 {
-  "version": "1.1.5",
-  "type": "patch",
+  "version": "1.1.3",
+  "type": "major",
   "minVersion": "1.0.0",
-  "mandatory": false,
-  "message": "A new version of Project Nova is ready.",
+  "mandatory": true,
+  "message": "Update to 1.1.3 - Full encrypted cloud sync for all school datasets (vault + row sync). Close Nova, install UPDATE, reopen. Configure Supabase for advanced multi-PC cloud (Desktop FULL-CLOUD-SYNC-SETUP.txt).",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "fa38f3d6d2884713b8c45785728e438bbd82ceef345f53198fcf2795b3c21a16",
-  "releaseNotes": "1.1.5 - Auto-relaunch after update, stop UPDATE NOW loop, simpler update dialog."
+  "sha256": "539fc24fd4f80df8e7456e8b1e21b553e563416218b38533dee0fc4e26b88ce3",
+  "releaseNotes": "1.1.3 - Advanced cloud: AES-GCM vault + nova_sync_records for students/teachers/staff/ops/bills/LMS/settings/license. Offline queue + retries. Default Cloud Sync ON when keys present."
 }
