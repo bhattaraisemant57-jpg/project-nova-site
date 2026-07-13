@@ -1,10 +1,10 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.4",
   "type": "major",
   "minVersion": "1.0.0",
-  "mandatory": true,
-  "message": "Update to 1.1.2 - Critical database migration fix. Close Nova, delete %APPDATA%\\site.pronova.demo\\nova.db (backup first if you need data), then install this update and reopen.",
+  "mandatory": false,
+  "message": "UPDATE TO LATEST VERSION - Cyberpunk in-app updater. No CMD flash. Silent install with live progress.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "4a63adb9ecf987304cbe1994f1b40ccbe64f9ed889a5c0c8f862b2404363d212",
-  "releaseNotes": "1.1.2 - Fix SQLite migration 12 (near \"-\" syntax error). Migration SQL is now ASCII-only inline. Delete nova.db once, then reinstall/reopen."
+  "sha256": "4ac43e6e970ff1968eed476192b1d5f3e28c1eaf68399e5d9591233587f0345a",
+  "releaseNotes": "1.1.4 - Cyberpunk update UI (UPDATE TO LATEST VERSION / INSTALLING UPDATE with glow progress). Hidden silent installer launch. NSIS sidebar/header branding."
 }
