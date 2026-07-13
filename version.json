@@ -1,10 +1,10 @@
 {
-  "version": "1.2.0",
-  "type": "major",
+  "version": "1.2.1",
+  "type": "patch",
   "minVersion": "1.0.0",
   "mandatory": true,
-  "message": "Update to 1.2.0 - School accounting, teacher class assign, auto timetable, smart fee reminders. Close Nova, install UPDATE NOW, then reopen.",
+  "message": "Update to 1.2.1 - Accountancy DB fix (fee tables + ledger). Close Nova, install UPDATE NOW, then reopen.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "f69b85219164418daa055db2274415190fa2c6df12378d7d405684947302f6a6",
-  "releaseNotes": "1.2.0 final-prep - Fiscal accountancy (fee types, structures, student ledger, discounts, partial pay, print bills), Principal teacher class assignment + Teacher HQ live classes, Temporal_Grid auto routine with conflict detection, Smart Fee Reminder drafts (EN/NP copy), academic year rollover stub. Includes cloud sync boolean-to-integer fix for Supabase."
+  "sha256": "064a80e559f35ff8fd4e4fdb741c0528c68a52c03ad622e6ed16c8a509d0f4fa",
+  "releaseNotes": "1.2.1 - Fixes Accountancy 'no such table' errors and Ledger infinite loading. Creates academic_years, fee_types, fee_structures, fee_invoice_lines on startup for existing installs. Year Rollover stub no longer crashes. Clear novaAlert errors instead of spinning forever."
 }
