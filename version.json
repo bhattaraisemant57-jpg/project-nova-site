@@ -1,10 +1,10 @@
 {
-  "version": "1.1.4",
-  "type": "major",
+  "version": "1.1.5",
+  "type": "patch",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "UPDATE TO LATEST VERSION - Cyberpunk in-app updater. No CMD flash. Silent install with live progress.",
+  "message": "A new version of Project Nova is ready.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "4ac43e6e970ff1968eed476192b1d5f3e28c1eaf68399e5d9591233587f0345a",
-  "releaseNotes": "1.1.4 - Cyberpunk update UI (UPDATE TO LATEST VERSION / INSTALLING UPDATE with glow progress). Hidden silent installer launch. NSIS sidebar/header branding."
+  "sha256": "fa38f3d6d2884713b8c45785728e438bbd82ceef345f53198fcf2795b3c21a16",
+  "releaseNotes": "1.1.5 - Auto-relaunch after update, stop UPDATE NOW loop, simpler update dialog."
 }
