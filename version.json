@@ -1,10 +1,10 @@
-﻿{
-  "version": "1.1.3",
+{
+  "version": "1.1.6",
   "type": "major",
   "minVersion": "1.0.0",
   "mandatory": true,
-  "message": "Update to 1.1.3 - Full encrypted cloud sync for all school datasets (vault + row sync). Close Nova, install UPDATE NOW, reopen. Configure Supabase (Desktop FULL-CLOUD-SYNC-SETUP.txt).",
+  "message": "Update to 1.1.6 - Full cloud sync plus fixed auto-updater. Close Nova, install UPDATE NOW, then reopen.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "539fc24fd4f80df8e7456e8b1e21b553e563416218b38533dee0fc4e26b88ce3",
-  "releaseNotes": "1.1.3 - Advanced cloud sync (AES-GCM vault + nova_sync_records): activations, students, teachers, staff, gate/library/canteen/transport, bills, LMS metadata, settings, license. Offline queue + retries."
+  "sha256": "706ccbeaf2a1fb188e2bd1bf3f704acfec7a58ff85bdfa19ce75cf6bd374634b",
+  "releaseNotes": "1.1.6 - Cloud sync (AES-GCM vault + row sync) + auto-relaunch updater + simple update dialog + migration 12 fix + Developer panel."
 }
