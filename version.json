@@ -1,10 +1,10 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.3",
   "type": "patch",
   "minVersion": "1.0.0",
   "mandatory": false,
-  "message": "Update to 1.3.2 - Real Blender medical heart GLB as Bio-Synth primary asset.",
+  "message": "Update to 1.3.3 - Believable anatomical heart (CC mesh) replaces primitive toy.",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "4d70c0479750b3fc50dc6df922882aa6ada2af55a52886fdbfe03401f3dc726b",
-  "releaseNotes": "1.3.2 - Blender 5.1 medical heart (.glb ~4MB + editable .blend): glass myocardium, chambers, valves, great vessels, coronaries, conduction. Bio-Synth prefers GLB over procedural bulk. Three.js runtime — not Unreal."
+  "sha256": "5cdeac0560ca6af91ba310f5ee37a0481aa748b361e9d0bc265b3bf2cab9a23f",
+  "releaseNotes": "1.3.3 - Bio-Synth ships a CC-Attribution anatomical heart GLB (~6MB, ~180k faces) with classic silhouette, vessels, fat pads, coronaries. Procedural cone/pipe bulk stays hidden. License: Get3DModels CC BY (see public/models/heart/LICENSE.txt)."
 }
