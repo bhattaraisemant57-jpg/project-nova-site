@@ -1,10 +1,10 @@
 {
-  "version": "1.2.1",
-  "type": "patch",
+  "version": "1.3.0",
+  "type": "minor",
   "minVersion": "1.0.0",
-  "mandatory": true,
-  "message": "Update to 1.2.1 - Accountancy DB fix (fee tables + ledger). Close Nova, install UPDATE NOW, then reopen.",
+  "mandatory": false,
+  "message": "Update to 1.3.0 - Bio-Synth Medical Heart Viewer (glass myocardium, conduction, layers).",
   "downloadUrl": "https://www.pronova.site/downloads/Project-Nova-Demo.exe",
-  "sha256": "064a80e559f35ff8fd4e4fdb741c0528c68a52c03ad622e6ed16c8a509d0f4fa",
-  "releaseNotes": "1.2.1 - Fixes Accountancy 'no such table' errors and Ledger infinite loading. Creates academic_years, fee_types, fee_structures, fee_invoice_lines on startup for existing installs. Year Rollover stub no longer crashes. Clear novaAlert errors instead of spinning forever."
+  "sha256": "1a9282410dcf6336b4b6708e7140005697ca21598fd5c6ab6ac9b8ff7c722fa9",
+  "releaseNotes": "1.3.0 - Medical Heart Viewer: glass myocardium, color-coded vessels/valves, SA-AV-His-Purkinje impulse, coronary layer, hierarchy + isolate/explode/slice/measure, MI/arrhythmia focus hooks, Blender glTF + UE5 scaffold. Procedural geometry ships now; drop public/models/heart/heart.glb to upgrade assets."
 }
